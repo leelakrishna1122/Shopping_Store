@@ -35,24 +35,7 @@
 
 ---
 
-## 📝 Project Structure (top-level)
 
-/ecommerce
-├─ index.php # product listing + add-to-cart
-├─ pages/
-│ ├─ cart.php # cart UI
-│ ├─ checkout.php # collects info + sends email
-│ ├─ admin_register.php
-│ ├─ manage_products.php
-│ └─ ...
-├─ includes/
-│ ├─ db.php # PDO connection
-│ └─ send_mail.php # PHPMailer wrapper
-├─ images/ # product & UI assets
-└─ css/style.css
-
-
----
 
 ## 🔄 Application Flow
 
