@@ -31,7 +31,7 @@
 | Mail | **PHPMailer 6** + Gmail SMTP (App Password) |
 | Front-end | HTML5, CSS3, vanilla JS |
 | Icons & Images | Emojis 😊 🎉, Unsplash background |
-| Hosting (free) | Works on **InfinityFree** (tested) |
+
 
 ---
 
