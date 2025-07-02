@@ -1,0 +1,27 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"          # localhost:8080 → Apache :80 in the container
+    volumes:
+      - .:/var/www/html    # hot‑reload source code while developing
+    depends_on:
+      - db
+
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: ecommerce_db
+      MYSQL_USER: ecommerce_user
+      MYSQL_PASSWORD: ecommerce_pass
+    
+    volumes:
+      # 1. Persist database files between restarts
+      - db_data:/var/lib/mysql
+      # 2. Auto‑import any .sql files on first startup
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+
+volumes:
+  db_data:

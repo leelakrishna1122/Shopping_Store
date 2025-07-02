@@ -1,6 +1,6 @@
 <?php
-include('../includes/db.php');  // Include the database connection
 session_start();
+include('../includes/db.php');  // Include the database connection
 
 if (isset($_POST['login'])) {
     $email = $_POST['email'];
