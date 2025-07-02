@@ -11,12 +11,12 @@ function sendOrderEmail($to, $subject, $body) {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';         // or your SMTP provider
         $mail->SMTPAuth = true;
-        $mail->Username = 'prasadnathani123@gmail.com';   // Your email
-        $mail->Password = 'infw tqgj gnwp lsis';      // Use App Password (not normal password)
+        $mail->Username = 'your_mail@gmail.com';   // Your email
+        $mail->Password = 'your_16digit_pass';      // Use App Password (not normal password)
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
 
-        $mail->setFrom('prasadnathani123@gmail.com', 'Kittu\'s Store');
+        $mail->setFrom('your_mail@gmail.com', 'Kittu\'s Store');
         $mail->addAddress($to);
         $mail->Subject = $subject;
         $mail->Body = $body;
