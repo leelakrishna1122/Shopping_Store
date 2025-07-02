@@ -1,12 +1,24 @@
-FROM php:8.2-apache
+FROM php:8.1-apache
 
-# Install required PHP extensions
-RUN docker-php-ext-install pdo pdo_mysql
+# Install required packages
+RUN apt-get update && apt-get install -y \
+    libzip-dev zip unzip \
+    && docker-php-ext-install pdo pdo_mysql
 
-# Copy project files into Apache
-COPY . /var/www/html/
+# Enable Apache mod_rewrite
+RUN a2enmod rewrite
 
-# Permissions (optional but useful)
+# Set the working directory
+WORKDIR /var/www/html
+
+# Copy project files
+COPY . /var/www/html
+
+# Set proper permissions
 RUN chown -R www-data:www-data /var/www/html
 
-EXPOSE 80
+# Install Composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+# Install PHP dependencies
+RUN composer install
