@@ -1,9 +1,9 @@
 <?php
-$host = getenv("MYSQLHOST");
-$dbname = getenv("MYSQLDATABASE");
-$username = getenv("MYSQLUSER");
-$password = getenv("MYSQLPASSWORD");
-$port = getenv("MYSQLPORT");
+$host = 'gondola.proxy.rlwy.net'; // Public host
+$dbname = 'railway';              // Your Railway DB name
+$username = 'root';               // MySQL username
+$password = 'YOUR_PASSWORD_HERE'; // Replace with the actual password shown in Railway
+$port = 14908;                    // Public port
 
 try {
     $conn = new PDO("mysql:host=$host;port=$port;dbname=$dbname", $username, $password);

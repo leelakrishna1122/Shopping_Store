@@ -1,4 +1,5 @@
 <?php
+header("Location: pages/register.php");
 // Start the session and check if the user is logged in
 session_start();
 
