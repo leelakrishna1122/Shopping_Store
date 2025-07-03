@@ -1,7 +1,7 @@
 <?php
 require $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+use phpmailer\phpmailer\PHPMailer;
+use phpmailer\phpmailer\Exception;
 
 function sendOrderEmail($to, $subject, $body) {
     $mail = new PHPMailer(true);

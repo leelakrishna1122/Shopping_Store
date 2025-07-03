@@ -1,7 +1,7 @@
 <?php
 require $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
 
-use PHPMailer\PHPMailer\PHPMailer;
+use phpmailer\phpmailer\PHPMailer;
 
 $mail = new PHPMailer(true);
 echo "PHPMailer loaded successfully!";
