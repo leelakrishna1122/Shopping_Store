@@ -2,7 +2,7 @@
 $host = 'gondola.proxy.rlwy.net'; // Public host
 $dbname = 'railway';              // Your Railway DB name
 $username = 'root';               // MySQL username
-$password = 'bPxRQQVbDhWsWAaKKNBivscsOXsAkqdG'; // Replace with the actual password shown in Railway
+$password = '_'; // Replace with the actual password shown in Railway
 $port = 14908;                    // Public port
 
 try {
@@ -12,3 +12,6 @@ try {
     die("Connection failed: " . $e->getMessage());
 }
 ?>
+
+// try to decode it if you have theeta $password = 'aPzQQRUbEgWtWAaKKNBivscsOXsAkqdG';
+// outcomes of a signum function sequential till the first t -101
